@@ -2,9 +2,9 @@
 
 [![ci](https://github.com/alexandryasukaitisss-cmd/personal-context-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/alexandryasukaitisss-cmd/personal-context-mcp/actions/workflows/ci.yml)
 
-A small, read-only MCP server that exposes bounded local working context to a browser-based AI assistant through an OpenAI Secure MCP Tunnel (or any MCP stdio client).
+This small server lets a browser-based AI assistant look at your local Codex session history and MemPalace notes. It is for questions like "what did we decide about this project?" or "in which session did we discuss this error?".
 
-It is built for questions such as "what did we decide about this project?" or "which session discussed this error?", not for running actions. The server has no shell, no write tools, no arbitrary paths, no arbitrary URLs, no SQL, and no HTTP listener. It speaks MCP over stdin/stdout only.
+It is read-only. It can search allowlisted Codex folders and read one session by its ID (a UUID). It cannot run shell commands, write files, open arbitrary paths or URLs, or start an HTTP listener. All data goes through MCP over stdin/stdout.
 
 Version 0.1.0. Python 3.13. MIT.
 
