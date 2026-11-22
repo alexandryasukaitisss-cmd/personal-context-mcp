@@ -1,5 +1,7 @@
 # personal-context-mcp
 
+[![ci](https://github.com/alexandryasukaitisss-cmd/personal-context-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/alexandryasukaitisss-cmd/personal-context-mcp/actions/workflows/ci.yml)
+
 A small, read-only MCP server that exposes bounded local working context to a browser-based AI assistant through an OpenAI Secure MCP Tunnel (or any MCP stdio client).
 
 It is built for questions such as "what did we decide about this project?" or "which session discussed this error?", not for running actions. The server has no shell, no write tools, no arbitrary paths, no arbitrary URLs, no SQL, and no HTTP listener. It speaks MCP over stdin/stdout only.
