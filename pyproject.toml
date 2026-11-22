@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "personal-context-mcp"
+version = "0.1.0"
+description = "Bounded read-only MCP server for local personal context"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Aliaksandr Yasiukaitsis" }]
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "mcp>=1.13,<2",
+]
+
+[project.optional-dependencies]
+mempalace = [
+  "chromadb>=1.5,<2",
+]
+
+[project.scripts]
+personal-context-mcp = "personal_context_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/personal_context_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.urls]
+Homepage = "https://github.com/alexandryasukaitisss-cmd/personal-context-mcp"
+Repository = "https://github.com/alexandryasukaitisss-cmd/personal-context-mcp"
+Issues = "https://github.com/alexandryasukaitisss-cmd/personal-context-mcp/issues"
