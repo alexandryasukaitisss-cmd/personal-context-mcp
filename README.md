@@ -167,3 +167,23 @@ The tests use synthetic files and never read a real Codex or MemPalace database.
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+
+## One-command install & MCP client config (Claude Desktop / Cursor / ChatGPT MCP)
+
+```sh
+pip install "git+https://github.com/alexandryasukaitisss-cmd/personal-context-mcp.git"
+# or run isolated with uvx:
+uvx --from "git+https://github.com/alexandryasukaitisss-cmd/personal-context-mcp.git" personal-context-mcp
+```
+
+```json
+{
+  "mcpServers": {
+    "personal-context": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/alexandryasukaitisss-cmd/personal-context-mcp.git", "personal-context-mcp"]
+    }
+  }
+}
+```

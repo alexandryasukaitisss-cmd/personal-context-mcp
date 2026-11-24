@@ -165,3 +165,23 @@ python -m compileall -q src tests
 ## Лицензия
 
 MIT. См. [LICENSE](LICENSE).
+
+
+## Быстрая установка и конфиг MCP (Claude Desktop / Cursor / ChatGPT MCP)
+
+```sh
+pip install "git+https://github.com/alexandryasukaitisss-cmd/personal-context-mcp.git"
+# или запуск в изоляции через uvx:
+uvx --from "git+https://github.com/alexandryasukaitisss-cmd/personal-context-mcp.git" personal-context-mcp
+```
+
+```json
+{
+  "mcpServers": {
+    "personal-context": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/alexandryasukaitisss-cmd/personal-context-mcp.git", "personal-context-mcp"]
+    }
+  }
+}
+```
